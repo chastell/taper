@@ -5,7 +5,7 @@ module Taper module Providers::NapiProjekt
   # courtesy of sites.google.com/site/napipy
   # FIXME: privatise
   def url_for hash
-    "http://napiprojekt.pl/unit_napisy/dl.php?l=PL&f=#{hash}&t=#{magic_for hash}&v=other&kolejka=false&nick=&pass=&napios=posix"
+    "http://napiprojekt.pl/unit_napisy/dl.php?l=PL&f=#{hash}&t=#{magic_for hash}&v=other"
   end
 
   private
