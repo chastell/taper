@@ -11,8 +11,8 @@ module Taper describe Providers::NapiProjekt do
         '8ddc258cd1451017a54dafa8b977e89b' => 'http://napiprojekt.pl/unit_napisy/dl.php?l=PL&f=8ddc258cd1451017a54dafa8b977e89b&t=aed47&v=other&kolejka=false&nick=&pass=&napios=posix',
         '974fbce02821e99135ed1f0c9a990b91' => 'http://napiprojekt.pl/unit_napisy/dl.php?l=PL&f=974fbce02821e99135ed1f0c9a990b91&t=46546&v=other&kolejka=false&nick=&pass=&napios=posix',
         'c204f839efcd562ba8ca7311bc3eb0d4' => 'http://napiprojekt.pl/unit_napisy/dl.php?l=PL&f=c204f839efcd562ba8ca7311bc3eb0d4&t=883c9&v=other&kolejka=false&nick=&pass=&napios=posix',
-      }.each do |hex, url|
-        Providers::NapiProjekt.url_for(hex).should == url
+      }.each do |hash, url|
+        Providers::NapiProjekt.url_for(hash).should == url
       end
     end
 
