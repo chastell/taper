@@ -2,8 +2,8 @@ module Taper module Providers::NapiProjekt
 
   extend self
 
-  def subtitles_for hash
-    url_for hash
+  def subtitles_for file
+    url_for Digest::MD5.digest file
   end
 
   private

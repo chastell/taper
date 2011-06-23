@@ -1,3 +1,4 @@
+require 'digest'
 require 'trollop'
 
 module Taper
