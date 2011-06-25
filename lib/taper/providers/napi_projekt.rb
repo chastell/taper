@@ -3,7 +3,7 @@ module Taper module Providers::NapiProjekt
   extend self
 
   def subtitles_for file
-    url_for Digest::MD5.digest file
+    url_for file
   end
 
   private
@@ -17,7 +17,8 @@ module Taper module Providers::NapiProjekt
   end
 
   # courtesy of sites.google.com/site/napipy
-  def url_for hash
+  def url_for file
+    hash = Digest::MD5.digest file
     "http://napiprojekt.pl/unit_napisy/dl.php?l=PL&f=#{hash}&t=#{magic_for hash}&v=other"
   end
 
